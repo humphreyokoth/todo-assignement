@@ -1,0 +1,19 @@
+h1{
+    text-decoration: underline;
+    color: #2586e8;
+    text-align: center;
+}
+
+.list li{
+    list-style-type: none;
+}
+.filter{
+    float: right;
+   padding: 20%;
+}
+
+.sort{
+    font-size:25px;
+    color:green;
+
+}
