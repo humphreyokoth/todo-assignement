@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -15,40 +15,51 @@
 <body>
     <div class="container">
         <form action="form">
-            <h1><input type="checkbox" name="checkbox" id="">My Todo-s</h1>
-            <div class="textinput">
-
-                <input type="textarea" id="add" placeholder="Add new..">
-                <i class='fas fa-calendar-alt'></i>
+            <h1>
+                <input type="checkbox" name="checkbox" id="todo-checkbox" checked />My
+                Todo-s
+            </h1>
+            <div class="custom-add">
+                <input type="text" class="custom-add-input" id="input-add" placeholder="Add new.." />
+                <i class="fas fa-calendar-alt"></i>
                 <button id="btn-add">Add</button>
-
             </div>
 
-            <hr>
+            <hr />
 
-            <div class=" filter">
-                Filter <input type="number" name="filter" id="" placeholder="All">
-                Sort <input type="number" name="filter" id="" placeholder="Added date"><i
-                    class='fas fa-sort-amount-down-alt sort'></i>
-
+            <div class="counter">
+                Filter
+                <input type="number" name="filter" id="filter" placeholder = "All" />
+                Sort
+                <input type="number" name="sort" id="sort" placeholder="Added date" /><i
+                    class="fas fa-sort-amount-down-alt sort-icon"></i>
             </div>
             <div class="list">
-                <ul class="list-li ">
-                    <li><input type="checkbox" name="checkbox" id="list-1">Buy groceries for next week</li>
-                    <li><input type="checkbox" name="checkbox" id="list-2">Renew car insurance</li>
-
-                    <li><input type="checkbox" name="checkbox" id="list-3">Sign up for online course</li>
+                <ul class="list-li">
+                    <li>
+                        <input type="checkbox" name="checkbox" id="list-1" checked />Buy
+                        groceries for next week
+                    </li>
+                    <li>
+                        <input type="checkbox" name="checkbox" id="list-2" />Renew car
+                        insurance
+                    </li>
+                    <li><span><input type="date" name="date" id="date-input" class="fa-regular fa-hourglass-half" /></span></li>
+                       
+                
+                    <li>
+                        <input type="checkbox" name="checkbox" id="list-3" />Sign up for
+                        online course
+                    </li>
 
                 </ul>
-                <input type="date" class="fa-regular fa-hourglass-half" name="date" id="" placeholder="Add new..">
-
-
+                
+              
             </div>
-
-
+            <!-- <div class="date-input"><input type="date" class="fa-regular fa-hourglass-half" name="date" id="date-input" /></div> -->
+          
         </form>
     </div>
-
 </body>
 
 </html>

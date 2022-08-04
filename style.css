@@ -1,19 +1,135 @@
-h1{
-    text-decoration: underline;
-    color: #2586e8;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  padding-bottom: 100px;
+}
+
+.container {
+  height: 400px;
+  width: 800px;
+  
+  box-shadow: 2px 2px 2px 2px #aaaaaa;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+
+  background-color: #fafafa;
+  padding-left: 60px;
+}
+hr {
+  margin-right: 90px;
+  width: 780px;
+}
+
+.custom-add {
+  padding-left: 40px;
+  width: 650px;
+  height: 40px;
+  border-radius: 3px;
+  border: none;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  margin-left: 40px;
+  position: relative;
+  padding-top: 10px;
+  justify-content: center;
+}
+.custom-add-input {
+  height: 30px;
+  width: 550px;
+  border: none;
+}
+#todo-checkbox{
+    height: 30px;
+    width: 50px;
+    margin-right: 1px;
+    display: inline-block;
+        
+}
+.fa-calendar-alt {
+  color: #1e90ff;
+}
+button {
+  /* position: relative; */
+  top: 0;
+  border-radius: 5px;
+  bottom: 0;
+  right: 0px;
+  z-index: 4;
+  border: none;
+  top: 2px;
+  height: 30px;
+  width: 47px;
+  cursor: pointer;
+  color: white;
+  background-color: #1e90ff;
+  transform: translateX(2px);
+}
+
+h1 {
+  text-decoration: underline;
+  color: #2586e8;
+  text-align: center;
+}
+
+.counter{
+  float: right;
+margin-top: 20px;
+   font:bold;
+   margin-right: 70px;
+   
+}
+#filter{
     text-align: center;
+    width: 100px;
+}
+#sort{
+    text-align: center;
+    width: 100px;
+    padding-left: 20px; 
+}
+.sort-icon{
+    font-size:20px;
+    color:#09cbaa;
+}
+.list{
+   border: 1px solid red;
+    margin-top: 60px;
+    /* margin-right: 50px; */
+    /* width: 40%; */
+    /* padding: 1px; */
+
 }
 
-.list li{
-    list-style-type: none;
-}
-.filter{
-    float: right;
-   padding: 20%;
-}
 
-.sort{
-    font-size:25px;
-    color:green;
-
+.list li {
+  list-style-type: none;
+  padding: 10px;
+  margin-left: 1px;
+  
 }
+/* #date-input{
+  float: right;
+  margin-right: 200px;
+ 
+ border-color: #f9cc00e6;
+width: 120px;
+ 
+  border-radius: 5px;
+
+  padding: 10px;
+  top: 2px;
+  height: 15px;
+  cursor: pointer;
+  color: rgb(5, 5, 5);
+ 
+  transform: translateX(2px);
+ 
+}
+ */
+
+
+
+
+
