@@ -15,10 +15,12 @@
 <body>
     <div class="container">
         <form action="form">
-            <h1>
-                <input type="checkbox" name="checkbox" id="todo-checkbox" checked />My
-                Todo-s
-            </h1>
+                <div>
+                    <input type="checkbox" name="checkbox" id="todo-checkbox" checked /><label class="label-1"><h1>My
+                        Todo-s</h1></label>    
+            
+                </div>
+                
             <div class="custom-add">
                 <input type="text" class="custom-add-input" id="input-add" placeholder="Add new.." />
                 <i class="fas fa-calendar-alt"></i>
@@ -29,7 +31,7 @@
 
             <div class="counter">
                 Filter
-                <input type="number" name="filter" id="filter" placeholder = "All" />
+                <input type="number" name="filter" id="filter" placeholder="All" />
                 Sort
                 <input type="number" name="sort" id="sort" placeholder="Added date" /><i
                     class="fas fa-sort-amount-down-alt sort-icon"></i>
@@ -37,26 +39,30 @@
             <div class="list">
                 <ul class="list-li">
                     <li>
-                        <input type="checkbox" name="checkbox" id="list-1" checked />Buy
-                        groceries for next week
+                        <input type="checkbox" name="checkbox" id="list-1" checked /> <label class="label-2">  Buy
+                            groceries for next week</label>   
                     </li>
-                    <li>
-                        <input type="checkbox" name="checkbox" id="list-2" />Renew car
-                        insurance
-                    </li>
-                    <li><span><input type="date" name="date" id="date-input" class="fa-regular fa-hourglass-half" /></span></li>
-                       
-                
-                    <li>
-                        <input type="checkbox" name="checkbox" id="list-3" />Sign up for
-                        online course
-                    </li>
-
                 </ul>
-                
-              
             </div>
-            <!-- <div class="date-input"><input type="date" class="fa-regular fa-hourglass-half" name="date" id="date-input" /></div> -->
+            <div class="list-2">
+                <ul>
+                    <li>
+                        <input type="checkbox" name="checkbox" id="insurance-list" /> <label class="label-3">Renew
+                            car insurance</label>   
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-hourglass-half" id="fa-regular"></i><input type="date" id="date"  name="date"/><label class="label-date"></label>
+                    </li>
+                </ul>
+            </div>
+            <div class="list-3">
+                <ul>
+                    <li>
+                        <input type="checkbox" name="checkbox" id="input-checkbox" /><label class="label-4">Sign up for online
+                            course</label>
+                    </li>
+                </ul>
+            </div>
           
         </form>
     </div>
