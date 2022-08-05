@@ -81,21 +81,26 @@ h1 {
 .counter {
   float: right;
   margin-top: 20px;
-  font: bold;
   margin-right: 70px;
+ 
 }
 #filter {
   text-align: center;
   width: 100px;
+  border-radius: 3px;
+  padding: 5px;
 }
 #sort {
   text-align: center;
   width: 100px;
+  padding: 5px;
   padding-left: 20px;
+  border-radius: 3px;
 }
 .sort-icon {
-  font-size: 20px;
+  font-size: 17px;
   color: #09cbaa;
+  padding: 4px;
 }
 /* LISTS */
 ul {
@@ -108,9 +113,10 @@ ul {
   border-radius: 1px solid #1e90ff;
 
 }
-.list-2 .li .fa-regular{
+#list-2{
   border-radius: 1px solid #1e90ff;
 }
+
 #date{
   border: 1px solid #ffcc00;
   padding: 6px;
@@ -124,7 +130,7 @@ ul {
   display: inline-block;
 }
 #fa-regular {
-  margin-left: 248px;
+  margin-left: 239px;
   color: #ffcc00;
   border: #ffffff;
  
