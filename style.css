@@ -119,9 +119,10 @@ ul {
 }
 
 #date{
-  border: 1px solid #ffcc00;
+  /* border: 1px solid #ffcc00; */
   padding: 6px;
   border-radius: 4px;
+
  
 }
 .list .list-li {
@@ -134,9 +135,40 @@ ul {
   margin-left: 239px;
   color: #ffcc00;
   border: #ffffff;
+
+    position: absolute;
  
 }
+/* icon start */
 
+
+.input-icons i {
+  position: absolute;
+  margin-left: 13px;
+  color: #ffcc00;
+  border: #ffffff;
+  position: absolute;
+  padding: 11px;
+}
+input.date {
+  padding: 8px;
+  align-items: center;
+  /* display: inline-flex; */
+  font-family: monospace;
+  padding-inline-start: 43px;
+  cursor: default;
+  overflow: hidden;
+  border: 1px solid #ffcc00;
+  border-radius: 5px;
+  padding: -2px;
+}
+
+/* .input-field {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+} */
+/*  icon end */
 /* LABELS */
 .label-4 {
   background-color: #ffffff;
@@ -159,7 +191,7 @@ ul {
 }
 
 
-.container {
+/* .container {
   height: 527px;
   width: 361px;
   box-shadow: 2px 2px 2px 2px #aaaaaa;
@@ -169,6 +201,17 @@ ul {
   padding-left: 53px;
   margin-top: -61px;
   padding-left: 43px;
+} */
+.container {
+  height: 570px;
+  width: 356px;
+  box-shadow: 2px 2px 2px 2px #aaaaaa;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  background-color: #fafafa;
+  padding-left: 53px;
+  margin-top: 0px;
+  padding-left: 4px;
 }
 form {
   width: 283px;
@@ -211,12 +254,17 @@ hr {
   /* margin-right: -7px; */
   width: 327px;
 }
+.container-list{
+  width: 200px;
+}
 .counter {
   /* float: right; */
   margin: 7px;
   /* margin-right: 194px; */
   width: 250px;
+  
 }
+
 #filter {
   text-align: center;
   width: 158px;
@@ -231,6 +279,7 @@ hr {
   padding: -21px;
   margin-left: 19px;
 }
+
 
 }
 
