@@ -18,7 +18,7 @@ body {
   padding-left: 19px;
 }
 hr {
-  /* margin-right: 90px; */
+
   width: 752px;
 }
 
@@ -117,9 +117,9 @@ ul {
 #list-2{
   border-radius: 1px solid #1e90ff;
 }
-
+/* DATE INPUT WITH ICON */
 #date{
-  /* border: 1px solid #ffcc00; */
+  
   padding: 6px;
   border-radius: 4px;
 
@@ -187,40 +187,7 @@ input.date {
 }
 
 
-/* .container {
-  height: 527px;
-  width: 361px;
-  box-shadow: 2px 2px 2px 2px #aaaaaa;
-  border: 2px solid #ffffff;
-  border-radius: 8px;
-  background-color: #fafafa;
-  padding-left: 53px;
-  margin-top: -61px;
-  padding-left: 43px;
-} */
-/* .container {
-  height: 570px;
-  width: 356px;
-  box-shadow: 2px 2px 2px 2px #aaaaaa;
-  border: 2px solid #ffffff;
-  border-radius: 8px;
-  background-color: #fafafa;
-  padding-left: 53px;
-  margin-top: 0px;
-  padding-left: 4px;
-} */
-/* .container {
-  height: 570px;
-  width: 340px;
-  box-shadow: 2px 2px 2px 2px #aaaaaa;
-  border: 2px solid #ffffff;
-  border-radius: 8px;
-  background-color: #fafafa;
-  padding-left: 53px;
-  margin-top: 27px;
-  padding: 20px;
-  padding-left: -6px;
-} */
+
 .container {
   height: 487px;
   width: 321px;
@@ -234,23 +201,11 @@ input.date {
   padding-left: -6px;
 }
 
-/* form {
-  width: 283px;
-  height: 132px;
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-} */
+
 form {
   width: 283px;
   height: 475px;
-  /* display: flex; */
-  /* flex-wrap: nowrap; */
-  /* flex-direction: row; */
-  /* justify-content: center; */
+  
   align-items: center;
   align-content: center;
 }
@@ -263,19 +218,7 @@ form {
   position: absolute;
   margin-left: 20px;
 }
-/* .custom-add {
-  width: 241px;
-  height: 40px;
-  border-radius: 3px;
-  border: none;
-  background-color: #ffffff;
-  margin-bottom: 20px;
-  margin-left: 0px;
-  padding-left: 15px;
-  position: relative;
-  padding-top: 10px;
-  justify-content: center;
-} */
+
 
 .custom-add {
   width: 282px;
@@ -296,16 +239,16 @@ form {
   border: none;
 }
 hr {
-  /* margin-right: -7px; */
+ 
   width: 296px;
 }
 .container-list{
   width: 200px;
 }
 .counter {
-  /* float: right; */
+  
   margin: 7px;
-  /* margin-right: 194px; */
+  
   width: 250px;
   
 }
@@ -327,28 +270,7 @@ hr {
 
 }
 /* CONTAINER-LIST */
-/* .container-list {
-  height: 194px;
-  width: 306px;
-  margin: -49px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-} */
-/* container-list {
-  height: 207px;
- 
-  margin: -21px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-} */
+
 .container-list {
   width: 275px;
   height: 171px;
@@ -360,17 +282,7 @@ hr {
   align-items: center;
   flex-wrap: wrap;
 }
-/* .container-list {
-  height: 102px;
-  width: 297px;
-  margin: -21px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-} */
+
 ul {
   list-style-type: none;
   margin: 12px;
@@ -383,12 +295,7 @@ div#list-2 {
     margin: -13px;
 }
 
-/* .label-4 {
-  background-color: #ffffff;
-  padding: 18px;
-  padding-right: 14px;
-  border-radius: 5px;
-} */
+
 .label-4 {
   background-color: #ffffff;
   padding: 13px;
@@ -397,14 +304,7 @@ div#list-2 {
 }
 /* CONTAINER-LIST END */
 /* INPUT_ICONS DESIGN */
-/* .input-icons i {
-  position: absolute;
-  margin-left: 0px;
-  color: #ffcc00;
-  border: #ffffff;
-  position: absolute;
-  padding: 13px;
-} */
+
 .input-icons i {
   position: absolute;
   margin-left: 59px;
@@ -413,34 +313,7 @@ div#list-2 {
   position: absolute;
   padding: 10px;
 }
-/* input.date {
-  padding: 10px;
-  align-items: center;
-  font-family: monospace;
-  padding-inline-start: -28px;
-  padding-inline-start: 38px;
-  cursor: default;
-  border: 1px solid #ffcc00;
-  border-radius: 5px;
-  width: 128px;
-  padding: -2px;
-  width: -31px;
-  margin-left: -8px;
-} */
-/* input.date {
-  padding: 10px;
-  align-items: center;
-  font-family: monospace;
-  padding-inline-start: -28px;
-  padding-inline-start: 34px;
-  cursor: default;
-  border: 1px solid #ffcc00;
-  border-radius: 5px;
-  width: 175px;
-  padding: -2px;
-  width: -31px;
-  margin-left: -8px;
-} */
+
 input.date {
   padding: 8px;
   align-items: center;
