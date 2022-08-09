@@ -131,44 +131,40 @@ ul {
 .list-2 ul li {
   display: inline-block;
 }
-#fa-regular {
-  margin-left: 239px;
-  color: #ffcc00;
-  border: #ffffff;
 
-    position: absolute;
- 
-}
-/* icon start */
 
+
+/* ICON -INPUT DESIGN START */
 
 .input-icons i {
   position: absolute;
-  margin-left: 13px;
+  margin-left: 204px;
   color: #ffcc00;
   border: #ffffff;
   position: absolute;
-  padding: 11px;
-}
-input.date {
-  padding: 8px;
-  align-items: center;
-  /* display: inline-flex; */
-  font-family: monospace;
-  padding-inline-start: 43px;
-  cursor: default;
-  overflow: hidden;
-  border: 1px solid #ffcc00;
-  border-radius: 5px;
-  padding: -2px;
+  padding: 13px;
 }
 
-/* .input-field {
-  width: 100%;
+input.date {
   padding: 10px;
-  text-align: center;
-} */
-/*  icon end */
+  align-items: center;
+ 
+  font-family: monospace;
+  padding-inline-start: -28px;
+  padding-inline-start: 38px;
+  cursor: default;
+ 
+  border: 1px solid #ffcc00;
+  border-radius: 5px;
+  width: 128px;
+  padding: -2px;
+  width: -31px;
+  margin-left: 195px;
+}
+
+/* ICON -INPUT DESIGN END */
+
+
 /* LABELS */
 .label-4 {
   background-color: #ffffff;
