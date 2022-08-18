@@ -1,87 +1,86 @@
-
-
-window.onload=()=>{
-const form1 = document.querySelector("#addForm")
-let items = document.getElementById("items");
-let add = document.getElementById("btn-add");
-let editItem = null;
-form1.addEventListener("submit",addItem);
-items.addEventListener("click",removeItem);
-
+function addItem() {
+  const a = document.getElementById("list");
+  const items = document.getElementById("items");
+  const li = document.createElement("li");
+  li.setAttribute("id", items.value);
+  li.appendChild(document.createTextNode(items.value));
+  a.appendChild(li);
 }
 
-function addItem(e){
-  e.preventDefault();
-  if(submit.value!= "Submit"){
-  console.log("Please submit");
-  editItem.target.parentNode.childNodes[0].data= document.getElementById("item").value;
-  submit.value = "Submit";
-  document.getElementById("item").value = "";
-  // document.getElementById().innerHTML = "Edit successful"
-  // document.getElementById().style.display="block";
-   // setTimeout(()=>{
-  //   document.getElementById("").style.display="none"
-  // },3000)
-  return false;
-  }
- 
- 
-
-  let newItem = document.getElementById("item").value;
-  if(newItem.trim()== "" || newItem.trim()== null) 
-  return false;
-  else 
-  document.getElementById("item").value= "";
-  let li = document.createElement("li");
-  li.className = "list-group-item";
-  let deleteButton = document.createElement("button");
-
-  deleteButton.className =  "delete-icon"
-  deleteButton.appendChild(document.createTextNode("Delete"));
-  let editButton = document.createElement("button");
-  editButton.className= "edit-icon"
-
-  editButton.appendChild(document.createTextNode("Edit"));
-  li.appendChild(document.createTextNode(newItem));
-  li.appendChild(deleteButton);
-  li.appendChild(editButton)
-  items.appendChild(li);
-
-
+// Creating a function to remove item from list
+function removeItem() {
+  // Declaring a constiable to get select element
+  const a = document.getElementById("list");
+  const items = document.getElementById("items");
+  const item = document.getElementById(items.value);
+  a.removeChild(item);
 }
 
-function removeItem(e){
-e.preventDefault()
-if(e.target.classList.contains("delete")){
-  if(confirm("Are you sure")){
-    let li = e.target.parentNode;
-    items.removeChild(li);
-    document.getElementById("Iblsuccess").innerHTML ="Item deleted successfully";
-    document.getElementById("Iblsuccess").style.display = "block";
-    setTimeout(()=>{
-      document.getElementById("Iblsuccess").style.display ="block";
-    },3000)
-  }
-}
-if(e.target.classList.contains(edit)){
-  document.getElementById("item").value =
-  e.target.parentNode.childNodes[0].data;
-  add.value = "EDIT"
-  editItem =e;
-}
+// window.onload = () => {
+//   const form1 = document.querySelector("#addForm");
+//   let items = document.getElementById("items");
+//   let add = document.getElementById("btn-add");
+//   let editItem = null;
+//   form1.addEventListener("submit", addItem);
+//   items.addEventListener("click", removeItem);
+// };
 
+// function addItem(e) {
+//   e.preventDefault();
+//   if (submit.value != "Submit") {
+//     console.log("Please submit");
+//     editItem.target.parentNode.childNodes[0].data =
+//       document.getElementById("item").value;
+//     submit.value = "Submit";
+//     document.getElementById("item").value = "";
+//     // document.getElementById().innerHTML = "Edit successful"
+//     // document.getElementById().style.display="block";
+//     // setTimeout(()=>{
+//     //   document.getElementById("").style.display="none"
+//     // },3000)
+//     return false;
+//   }
 
+//   let newItem = document.getElementById("item").value;
+//   if (newItem.trim() == "" || newItem.trim() == null) return false;
+//   else document.getElementById("item").value = "";
+//   let li = document.createElement("li");
+//   li.className = "list-group-item";
+//   let deleteButton = document.createElement("button");
 
+//   deleteButton.className = "delete-icon";
+//   deleteButton.appendChild(document.createTextNode("Delete"));
+//   let editButton = document.createElement("button");
+//   editButton.className = "edit-icon";
 
-}
+//   editButton.appendChild(document.createTextNode("Edit"));
+//   li.appendChild(document.createTextNode(newItem));
+//   li.appendChild(deleteButton);
+//   li.appendChild(editButton);
+//   items.appendChild(li);
+// }
 
-
-
-
-
-
-
-
+// function removeItem(e) {
+//   e.preventDefault();
+//   if (e.target.classList.contains("delete")) {
+//     if (confirm("Are you sure")) {
+//       let li = e.target.parentNode;
+//       items.removeChild(li);
+//       document.getElementById("Iblsuccess").innerHTML =
+//         "Item deleted successfully";
+//       document.getElementById("Iblsuccess").style.display = "block";
+//       setTimeout(() => {
+//         document.getElementById("Iblsuccess").style.display = "block";
+//       }, 3000);
+//     }
+//   }
+//   if (e.target.classList.contains(edit)) {
+//     document.getElementById("item").value =
+//       e.target.parentNode.childNodes[0].data;
+//     add.value = "EDIT";
+//     editItem = e;
+//   }
+// }
 
 // // #######################################
 
@@ -92,31 +91,30 @@ if(e.target.classList.contains(edit)){
 //   let item = document.getElementById("box");
 //   let list_item = document.getElementById("list_item");
 //   if(item.value != ""){
-  
+
 //     // Creating element and adding value to it
 //     let make_li = document.createElement("LI");
 //     make_li.appendChild(document.createTextNode(item.value));
-  
+
 //     // Adding li to ul
 //     list_item.appendChild(make_li);
-  
+
 //     // Reset the value of box
 //     item.value=""
-    
+
 //     // Delete a li item on click
 //     make_li.onclick = function(){
 //       this.parentNode.removeChild(this);
 //     }
-  
+
 //   }
 //   else{
-  
+
 //     // Alert msg when value of box is "" empty.
 //     alert("plz add a value to item");
 //   }
-  
+
 //   }
-  
 
 // window.onload = () => {
 // 	const form1 = document.querySelector("#addForm");
@@ -215,6 +213,3 @@ if(e.target.classList.contains(edit)){
 // function toggleButton(ref, btnID) {
 // 	document.getElementById(btnID).disabled = false;
 // }
-
-
-
