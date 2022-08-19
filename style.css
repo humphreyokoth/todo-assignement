@@ -57,7 +57,7 @@ hr {
 .fa-calendar-alt {
   color: #1e90ff;
 }
-button {
+#submit{
   top: 0;
   border-radius: 5px;
   bottom: 0;
@@ -81,8 +81,9 @@ h1 {
 /* COUNTER FIELDS*/
 .counter {
   float: right;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-right: 70px;
+  margin-bottom: 26px;
  
 }
 #filter {
@@ -107,12 +108,17 @@ h1 {
 ul {
   list-style-type: none;
 
-  margin: 30px;
+  /* margin: 30px; */
+  display: inline-flex;
 
 }
-#insurance-list{
+/* #insurance-list{
   border-radius: 1px solid #1e90ff;
 
+} */
+#tasks{
+  display: flex;
+  justify-content: space-between;
 }
 #list-2{
   border-radius: 1px solid #1e90ff;
@@ -125,11 +131,30 @@ ul {
 
  
 }
+
+.icon-button {
+  background: none;
+  color: #000;
+  margin-left: 300px;
+  padding-right: 0;
+  border: none;
+}
+.trash-icon{
+  background: none;
+  color: #000;
+  padding: 3px;
+  margin: 5px;
+  border: none;
+}
 .list .list-li {
   margin-top: 90px;
 }
 .list-2 ul li {
   display: inline-block;
+}
+div#list {
+  padiing: 0;
+  margin: -35px;
 }
 
 
@@ -285,11 +310,14 @@ hr {
 
 ul {
   list-style-type: none;
-  margin: 12px;
+  /* margin: 12px; */
+ 
 }
 .list-2 ul li {
   display: inline-block;
   margin: 13px;
+  
+  
 }
 div#list-2 {
     margin: -13px;

@@ -14,7 +14,7 @@
 
 <body>
     <div class="container">
-        <form id="addForm">
+        <form id="addForm" action="index.html" method="post">
             <div class="row">
                 <div class="col-1">
                     <input type="checkbox" name="checkbox" id="todo-checkbox" checked /><label class="label-1">
@@ -23,9 +23,9 @@
                 </div>
 
                 <div class="custom-add">
-                    <input type="text" class="custom-add-input" id="input-add" placeholder="Add new.." />
+                    <input type="text" class="custom-add-input" id="input-add" name ="task" placeholder="Add new.." />
                     <i class="fas fa-calendar-alt"></i>
-                    <button id="submit" value="submit">Add</button>
+                    <button type="submit" id="submit" value="submit">Add</button>
                 </div>
             </div>
         </form>
@@ -38,13 +38,16 @@
                 <input type="number" name="sort" id="sort" placeholder="Added date" /><i
                     class="fas fa-sort-amount-down-alt sort-icon" id="sort-icon"></i>
             </div>
-            <form action="">
+           
             <div class="container-list">
-                <div class="list">
-                    <ul class="list-li" id="items">
-                        <li>
+                <div class="list" id="list">
+                    <ul class="list-li" id="task">
+                        <!-- <li>
                             <input type="checkbox" name="checkbox" id="list-1" checked />
                             <label class="label-2"> Buy groceries for next week</label>
+                            <button class="icon-button"><i class="fa-solid fa-pencil"></i></button>
+                            
+                            <button class="trash-icon"><i class="fa-solid fa-trash-can"></i></button>
                         </li>
                         <li>
                             <input type="checkbox" name="checkbox" id="insurance-list" />
@@ -53,7 +56,7 @@
                         <li>
                             <input type="checkbox" name="checkbox" id="input-checkbox" /><label class="label-4">Sign up
                                 for online course</label>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
                 <!-- <div class="list-2" id="list-2">
@@ -75,7 +78,7 @@
                     </ul>
                 </div> -->
             </div>
-        </form>
+       
     </div>
     <script src="todo.js"></script>
 </body>
