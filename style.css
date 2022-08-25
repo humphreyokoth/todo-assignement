@@ -118,9 +118,11 @@ ul {
 i.fa-solid.fa-trash-can {
   float: right;
   padding-left: 10px;
+  color: #e21111c7;
 }
 i.fa-solid.fa-pencil {
   float: right;
+  color: #09cbaa;;
 }
 i.fa-regular.fa-hourglass-half.icon {
   position: absolute;
