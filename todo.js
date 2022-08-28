@@ -25,108 +25,100 @@
 // }
 
 
-// window.addEventListener('load', () => {
-// 	const form = document.querySelector("#addForm");
-// 	const input = document.querySelector("#input-add");
-// 	const list_el = document.querySelector("#task");
+window.addEventListener('load', () => {
+	const form = document.querySelector("#addForm");
+	const input = document.querySelector("#input-add");
+	const list = document.querySelector("#task");
+console.log(form)
+	form.addEventListener('submit', (e) => {
+		e.preventDefault();
+// console.log("submit form")
+		const task = input.value;
 
-// 	form.addEventListener('submit', (e) => {
-// 		e.preventDefault();
+		const taskList = document.createElement('div');
+		taskList.classList.add('task');
+  
+		const items = document.createElement('div');
+		items.classList.add('list-li');
+		items.innerText= task
+		taskList.appendChild(items);
 
-// 		const task = input.value;
+		const list = document.createElement('list');
+		list.classList.add("items");
+		list.type = 'text';
+		list.value = task;
+		list.setAttribute('readonly', 'readonly');
 
-// 		const task_el = document.createElement('ul');
-// 		task_el.classList.add('list');
+		items.appendChild(list);
 
-// 		const task_content_el = document.createElement('li');
-// 		task_content_el.classList.add('list');
-
-// 		task_el.appendChild(task_content_el);
-
-// 		const task_input_el = document.createElement('input');
-// 		task_input_el.classList.add('text');
-// 		task_input_el.type = 'text';
-// 		task_input_el.value = task;
-// 		task_input_el.setAttribute('readonly', 'readonly');
-
-// 		task_content_el.appendChild(task_input_el);
-
-// 		const task_actions_el = document.createElement('ul');
-// 		task_actions_el.classList.add('actions');
+		const task_actions_el = document.createElement('ul');
+		task_actions_el.classList.add('actions');
 		
-// 		const task_edit_el = document.createElement('icon-button');
-// 		task_edit_el.classList.add('icon-button');
-// 		task_edit_el.innerText = 'Edit';
+		const taskListit_el = document.createElement('icon-button');
+		taskListit_el.classList.add('icon-button');
+		taskListit_el.innerText = 'Edit';
 
-// 		const task_delete_el = document.createElement('button');
-// 		task_delete_el.classList.add('delete');
-// 		task_delete_el.innerText = 'Delete';
+		const task_delete_el = document.createElement('fa-trash-can');
+		task_delete_el.classList.add('delete');
+		task_delete_el.innerText = 'Delete';
 
-// 		task_actions_el.appendChild(task_edit_el);
-// 		task_actions_el.appendChild(task_delete_el);
+		task_actions_el.appendChild(taskListit_el);
+		task_actions_el.appendChild(task_delete_el);
 
-// 		task_el.appendChild(task_actions_el);
+		taskList.appendChild(task_actions_el);
 
-// 		list_el.appendChild(task_el);
+		list.appendChild(taskList);
 
-// 		input.value = '';
+		input.value = '';
 
-// 		task_edit_el.addEventListener('click', (e) => {
-// 			if (task_edit_el.innerText.toLowerCase() == "edit") {
-// 				task_edit_el.innerText = "Save";
-// 				task_input_el.removeAttribute("readonly");
-// 				task_input_el.focus();
-// 			} else {
-// 				task_edit_el.innerText = "Edit";
-// 				task_input_el.setAttribute("readonly", "readonly");
-// 			}
-// 		});
+		taskListit_el.addEventListener('click', (e) => {
+			if (taskListit_el.innerText.toLowerCase() == "edit") {
+				taskListit_el.innerText = "Save";
+				list.removeAttribute("readonly");
+				list.focus();
+			} else {
+				taskListit_el.innerText = "Edit";
+				list.setAttribute("readonly", "readonly");
+			}
+		});
 
-// 		task_delete_el.addEventListener('click', (e) => {
-// 			list_el.removeChild(task_el);
-// 		});
-// 	});
-// });
-// 
-
-// function addItem(){
-// const ul = document.getElementById("#task");
-// const  addItem = document.getElementById("#submit")
-// const li =  document.createElement("li");
-
-// li.setAttribute('id',addItem.value);
-// li.appendChild(document.createTextNode(addItem.value));
-// ul.appendChild(li);
+		task_delete_el.addEventListener('click', (e) => {
+			list.removeChild(taskList);
+		});
+	});
+});
 
 
-// }
+// const form = document.querySelector("#addForm");
+// 	//const input = document.querySelector("#input-add");
+// const list = document.querySelector("#task");
 
-const input = document.querySelector(".custom-add");
-const addBtn = document.querySelector(".submit");
+// const input = document.querySelector(".custom-add");
+// const addBtn = document.querySelector(".submit");
 
-const tasks = document.querySelector(".list");
+// const tasks = document.querySelector(".list");
 
-// Add Task
+// // Add Task
 
-input.addEventListener('keyup', () => {
-		if (input.value() !== 0) {
-			addBtn.classList.add("active");
+// input.addEventListener('keyup', () => {
+// 		if (input !== 0) {
+// 			addBtn.classList.add("active");
 
-		} else {
-			addBtn.classList.remove("active");
-		}
-})
+// 		} else {
+// 			addBtn.classList.remove("active");
+// 		}
+// })
 
-addBtn.addEventListener("click",()=>{
-	if(input.value()!== 0){
-		let newItem = document.createElement("div");
-		newItem.classList.add("list")
-		newItem.innerHTML = `${input.value}
-		< div class="list" id="list">
-		<i class="fa-solid fa-trash-can"></i> <i class="fa-solid fa-pencil"></i></ul>`
-		tasks.appendChild(newItem);
-		input.value = "";
-	}else{
-		alert("Please enter a task")
-	}
-})
+// addBtn.addEventListener("click",()=>{
+// 	if(input !== 0){
+// 		let newItem = document.createElement("div");
+// 		newItem.classList.add("list")
+// 		newItem.innerHTML = `${input}
+// 		< div class="list" id="list">
+// 		<i class="fa-solid fa-trash-can"></i> <i class="fa-solid fa-pencil"></i></ul>`
+// 		tasks.appendChild(newItem);
+// 		input.value = "";
+// 	}else{
+// 		alert("Please enter a task")
+// 	}
+// })
