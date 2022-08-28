@@ -1,7 +1,7 @@
 
 
 $(document).ready(function(){
-$("#input-add").change(function(){
+$(".submit").change(function(){
     const input = $(this).val();
     $("ul").append('<li>'+ input +  '<input type="checkbox" name="checkbox" id="list-1" /> <i class= "fa-solid fa-trash-can"> </i> <i class="fa-solid fa-pencil"></i> </li>');
     $(this).val("");
