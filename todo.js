@@ -14,7 +14,7 @@ window.addEventListener("load", () => {
     const items = document.createElement("div");
     items.classList.add("list-li");
     items.innerText = task;
-    // taskList.appendChild(items);
+    list.appendChild(items);
 
     const taskInput = document.createElement("input");
     taskInput.classList.add("text");
