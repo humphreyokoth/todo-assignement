@@ -2,7 +2,7 @@ window.addEventListener("load", () => {
   const form = document.querySelector("#addForm");
   const input = document.querySelector("#input-add");
   const list = document.querySelector("#task");
-  console.log(form);
+//   console.log(form);
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     // console.log("submit form")
