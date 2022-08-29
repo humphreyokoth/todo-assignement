@@ -40,52 +40,97 @@ console.log(form)
   
 		const items = document.createElement('div');
 		items.classList.add('list-li');
-		items.innerText= task
-		taskList.appendChild(items);
+		items.innerText= task 
+		// taskList.appendChild(items); 
 
-		const list = document.createElement('list');
-		list.classList.add("items");
-		list.type = 'text';
-		list.value = task;
-		list.setAttribute('readonly', 'readonly');
+		const taskInput = document.createElement("input")
+		taskInput.classList.add("text");
+		taskInput.type = "text";
+		taskInput.value =task;
+		//taskInput .setAttribute
+		taskList.appendChild(taskInput)
 
-		items.appendChild(list);
+		const taskIcons = document.createElement("li")
+		taskIcons.classList.add("list")
+		// Edit Icon
+		const taskEditIcon = document.createElement("fa-pencil");
+		taskEditIcon.classList.add("edit");
+		taskEditIcon.innerHTML ="Edit";
+		// Delete Icon
+		const taskDeleteIcon = document.createElement("fa-trash-can");
+		taskDeleteIcon.classList.add("delete");
+		taskDeleteIcon.innerHTML = "Delete"
 
-		const task_actions_el = document.createElement('ul');
-		task_actions_el.classList.add('actions');
-		
-		const taskListit_el = document.createElement('icon-button');
-		taskListit_el.classList.add('icon-button');
-		taskListit_el.innerText = 'Edit';
+		//  Append Child to Edit and Delete Icon
+		taskIcons.appendChild(taskEditIcon);
+		taskIcons.appendChild(taskDeleteIcon);
 
-		const task_delete_el = document.createElement('fa-trash-can');
-		task_delete_el.classList.add('delete');
-		task_delete_el.innerText = 'Delete';
 
-		task_actions_el.appendChild(taskListit_el);
-		task_actions_el.appendChild(task_delete_el);
+		taskList.appendChild(taskIcons);
+		items.appendChild(taskList);
 
-		taskList.appendChild(task_actions_el);
+		input.value= "";
 
-		list.appendChild(taskList);
-
-		input.value = '';
-
-		taskListit_el.addEventListener('click', (e) => {
-			if (taskListit_el.innerText.toLowerCase() == "edit") {
-				taskListit_el.innerText = "Save";
-				list.removeAttribute("readonly");
-				list.focus();
-			} else {
-				taskListit_el.innerText = "Edit";
-				list.setAttribute("readonly", "readonly");
+		taskEditIcon.addEventListener("click",()=>{
+			if (taskEditIcon.innerText == "edit" ) {
+				taskInput.removeAttribute("readonly");
+			taskInput.focus();
+			taskEditIcon.innerHTML="Save"
+				
+			}else{
+				taskInput.setAttribute("readonly","readonly");
+				task.taskEditIcon.innerText ="taskEditIcon"
+				console.log("Save");
 			}
-		});
+		})
 
-		task_delete_el.addEventListener('click', (e) => {
-			list.removeChild(taskList);
-		});
-	});
+		taskDeleteIcon.addEventListener("click",()=>{
+			items.removeChild(items);
+		})
+
+	// 	const list = document.createElement('list');
+	// 	list.classList.add("items");
+	// 	list.type = 'text';
+	// 	list.value = task;
+	// 	list.setAttribute('readonly', 'readonly');
+
+	// 	items.appendChild(list);
+
+	// 	const task_actions_el = document.createElement('ul');
+	// 	task_actions_el.classList.add('actions');
+		
+	// 	const taskListit_el = document.createElement('icon-button');
+	// 	taskListit_el.classList.add('icon-button');
+	// 	taskListit_el.innerText = 'Edit';
+
+	// 	const task_delete_el = document.createElement('fa-trash-can');
+	// 	task_delete_el.classList.add('delete');
+	// 	task_delete_el.innerText = 'Delete';
+
+	// 	task_actions_el.appendChild(taskListit_el);
+	// 	task_actions_el.appendChild(task_delete_el);
+
+	// 	taskList.appendChild(task_actions_el);
+
+	// 	list.appendChild(taskList);
+
+	// 	input.value = '';
+
+	// 	taskListit_el.addEventListener('click', (e) => {
+	// 		if (taskListit_el.innerText.toLowerCase() == "edit") {
+	// 			taskListit_el.innerText = "Save";
+	// 			list.removeAttribute("readonly");
+	// 			list.focus();
+	// 		} else {
+	// 			taskListit_el.innerText = "Edit";
+	// 			list.setAttribute("readonly", "readonly");
+	// 		}
+	// 	});
+
+	// 	task_delete_el.addEventListener('click', (e) => {
+	// 		list.removeChild(taskList);
+	// 	});
+	// });
 });
 
 
@@ -121,4 +166,4 @@ console.log(form)
 // 	}else{
 // 		alert("Please enter a task")
 // 	}
-// })
+ })
