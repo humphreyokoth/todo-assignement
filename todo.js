@@ -2,59 +2,65 @@ window.addEventListener("load", () => {
   const form = document.querySelector("#addForm");
   const input = document.querySelector("#input-add");
   const ul = document.querySelector("#task");
+  const deleteIcon = document.getElementsByClassName("deleteIcon");
+  const editIcon = document.getElementsByClassName("editIcon");
   //   console.log(form);
 
   function createLi() {
-    const li = document.createElement("li");
-    const label = document.createElement("label");
-    label.textContent = "";
-    const checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-    const editIcon = document.createElement("fa-pencil");
-    editIcon.textContent = "edit";
-    const removeIcon = document.createElement("fa-trash-can");
-    removeIcon.textContent = "remove";
+  //  list with input value
+    const list =
+      '<li> <input type="checkbox" name="checkbox" id="list-1" checked />' +
+      '<label class="label-2"> ' +
+      input.value +
+      "</label>" +
+      ' <i class="fa-solid fa-trash-can deleteIcon"></i>' +
+      '<i class="fa-solid fa-pencil editIcon"></i>' +
+      "</li>";
 
-    li.appendChild(label);
-    label.appendChild(checkbox);
-    li.appendChild(editIcon);
-    li.appendChild(removeIcon);
-    return li;
+    return list;
   }
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const li = createLi();
     if (input.value === "") {
       alert("Enter item");
-      
     } else {
-      ul.appendChild(li)
-      
+      ul.innerHTML += li;
     }
   });
-// 
-  ul.addEventListener("change",(e)=>{
-    const checkbox = e.target;
-    const checked = checkbox.checked;
-    const li = checkbox.parentNode.parentNode;
-    if (checked) {
-      li.className ="selected"
-    } else {
-      li.className = ""
-    }
-  })
 
-  ul.addEventListener("click",(e)=>{
-       if (e.target.tagName === "i") {
-        const i  = e.target;
-        const li = i.parentNode;
-        const ul = li.parentNode;
-        if(i.textContent === "remove")
-        ul.removeChild()
-      
-        
-       }
-  })
+  // editIcon.addEventListener("click", () => {
+  //     if (taskEditIcon.innerText == "edit") {
+  //       taskInput.removeAttribute();
+  //       taskInput.focus();
+  //       taskEditIcon.innerHTML = "Save";
+  //     } else {
+  //       taskInput.setAttribute();
+  //       task.taskEditIcon.innerText = "taskEditIcon";
+  //       console.log("Save");
+  //     }
+  //   });
+ 
+    function deleteList(e){
+      console.log("#######");
+    if (e.target.tagName === "deleteIcon") {
+      const deleteIcon = e.target;
+      const li = deleteIcon.parentNode;
+      const ul = li.parentNode;
+      if (deleteIcon.textContent === "remove") ul.removeChild();
+    }
+    
+    
+  };
+  deleteList();
+
+//   taskDeleteIcon.addEventListener("click", () => {
+//   items.removeChild(items);
+// });
+
+
+
+
 });
 
 // const form = document.querySelector("#addForm");
