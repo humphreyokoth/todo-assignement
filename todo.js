@@ -28,28 +28,28 @@ window.addEventListener("load", () => {
       ul.innerHTML += li;
     }
   });
- function editList(){
+ function editList(e){
   console.log("####### Editing");
 
-  // if (taskEditIcon.innerText == "edit") {
-  //         taskInput.removeAttribute();
-  //         taskInput.focus();
-  //         taskEditIcon.innerHTML = "Save";
-  //       } else {
-  //         taskInput.setAttribute();
-  //         task.taskEditIcon.innerText = "taskEditIcon";
-  //         console.log("Save");
-  //       }
+  if (editIcon.innerText == "edit") {
+          taskInput.removeAttribute();
+          taskInput.focus();
+          editIcon.innerHTML = "Save";
+        } else {
+          taskInput.setAttribute();
+          task.editIcon.innerText = "editIcon";
+          console.log("Save");
+        }
  }
  editList();
   // editIcon.addEventListener("click", () => {
-  //     if (taskEditIcon.innerText == "edit") {
+  //     if (editIcon.innerText == "edit") {
   //       taskInput.removeAttribute();
   //       taskInput.focus();
-  //       taskEditIcon.innerHTML = "Save";
+  //       editIcon.innerHTML = "Save";
   //     } else {
   //       taskInput.setAttribute();
-  //       task.taskEditIcon.innerText = "taskEditIcon";
+  //       task.editIcon.innerText = "editIcon";
   //       console.log("Save");
   //     }
   //   });
@@ -57,8 +57,7 @@ window.addEventListener("load", () => {
     function deleteList(e){
       console.log("#######");
     if (e === "deleteIcon") {
-      const deleteIcon = e.target;
-      const li = deleteIcon.parentNode;
+       const li = deleteIcon.parentNode;
       const ul = li.parentNode;
       if (deleteIcon.textContent === "remove") ul.removeChild();
     }
@@ -106,16 +105,16 @@ window.addEventListener("load", () => {
 // const taskIcons = document.createElement("li");
 // taskIcons.classList.add("list");
 // // Edit Icon
-// const taskEditIcon = document.createElement("fa-pencil");
-// taskEditIcon.classList.add("edit");
-// taskEditIcon.innerHTML = "Edit";
+// const editIcon = document.createElement("fa-pencil");
+// editIcon.classList.add("edit");
+// editIcon.innerHTML = "Edit";
 // // Delete Icon
 // const taskDeleteIcon = document.createElement("button");
 // taskDeleteIcon.classList.add("delete");
 // taskDeleteIcon.innerHTML = "Delete";
 
 // //  Append Child to Edit and Delete Icon
-// taskIcons.appendChild(taskEditIcon);
+// taskIcons.appendChild(editIcon);
 // taskIcons.appendChild(taskDeleteIcon);
 
 // // Append taskIcons to tasklist
@@ -125,14 +124,14 @@ window.addEventListener("load", () => {
 
 // input.value = "";
 
-// taskEditIcon.addEventListener("click", () => {
-//   if (taskEditIcon.innerText == "edit") {
+// editIcon.addEventListener("click", () => {
+//   if (editIcon.innerText == "edit") {
 //     taskInput.removeAttribute();
 //     taskInput.focus();
-//     taskEditIcon.innerHTML = "Save";
+//     editIcon.innerHTML = "Save";
 //   } else {
 //     taskInput.setAttribute();
-//     task.taskEditIcon.innerText = "taskEditIcon";
+//     task.editIcon.innerText = "editIcon";
 //     console.log("Save");
 //   }
 // });
