@@ -28,7 +28,20 @@ window.addEventListener("load", () => {
       ul.innerHTML += li;
     }
   });
+ function editList(){
+  console.log("####### Editing");
 
+  // if (taskEditIcon.innerText == "edit") {
+  //         taskInput.removeAttribute();
+  //         taskInput.focus();
+  //         taskEditIcon.innerHTML = "Save";
+  //       } else {
+  //         taskInput.setAttribute();
+  //         task.taskEditIcon.innerText = "taskEditIcon";
+  //         console.log("Save");
+  //       }
+ }
+ editList();
   // editIcon.addEventListener("click", () => {
   //     if (taskEditIcon.innerText == "edit") {
   //       taskInput.removeAttribute();
@@ -43,7 +56,7 @@ window.addEventListener("load", () => {
  
     function deleteList(e){
       console.log("#######");
-    if (e.target.tagName === "deleteIcon") {
+    if (e === "deleteIcon") {
       const deleteIcon = e.target;
       const li = deleteIcon.parentNode;
       const ul = li.parentNode;
