@@ -26,7 +26,8 @@ function editList() {
     editIcon[i].addEventListener(
       "click",
       function () {
-        this.setAttribute("contenteditable", true);
+        this.parent("li").find("label").setAttribute("contenteditable",true);
+        // this.setAttribute("contenteditable", true);
         
       },
       false
