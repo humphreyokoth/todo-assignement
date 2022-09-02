@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
 
 </head>
 
 <body>
     <div class="container">
-        <form  class="addTask"  id="addForm" name="todoList"  method="POST">
+        <form  class="addTask"  id="addForm" name="todoList" >
             <div class="row">
                 <div class="col-1">
                     <input type="checkbox" name="checkbox" id="todo-checkbox" checked /><label class="label-1">
@@ -49,16 +49,16 @@
                             <label class="label-2"> Buy groceries for next week</label>
                             <i class="fa-solid fa-trash-can deleteIcon"></i>
 
-                            <i class="fa-solid fa-pencil editIcon"></i>
+                            <i class="fa-solid fa-pencil editIcon " contenteditable="true"></i>
                            
                         </li>
                         <li>
                             <input type="checkbox" name="checkbox" id="insurance-list" />
-                            <label class="label-3">Renew car insurance
+                            <label class="label-3">Renew car insurance</label>
                              <!-- <i class="fa-regular fa-hourglass-half icon">
                             </i><input class="date input-icons" type="date" name="date" /> -->
                             <label class="label-date"></label><i class="fa-solid fa-trash-can deleteIcon"></i>
-                             <i class="fa-solid fa-pencil editIcon"></i></label>
+                             <i class="fa-solid fa-pencil editIcon"></i>
                           
                         </li>
                        
@@ -74,8 +74,7 @@
             </div>
        
     </div>
-    <script src="todo.js"></script>
-    <!-- <script src="todoJquery.js"></script> -->
+    <script src="todoJquery.js"></script>
 </body>
 
 </html>
