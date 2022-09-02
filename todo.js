@@ -26,9 +26,8 @@ function editList() {
     editIcon[i].addEventListener(
       "click",
       function () {
-      
-        this.setAttribute("contentEditable", true);
-
+        this.setAttribute("contenteditable", true);
+        
       },
       false
     );
