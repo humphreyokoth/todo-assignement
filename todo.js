@@ -26,20 +26,42 @@ function editList() {
     editIcon[i].addEventListener(
       "click",
       function () {
-        this.parent("li").find("label").setAttribute("contenteditable",true);
-        // this.setAttribute("contenteditable", true);
+        var parentofSelected = this.parentNode; // gives the parent DIV
+        //console.log("Reached");
+        var children = parentofSelected.childNodes;
+        //console.log(parentofSelected);
+        for (var i = 0; i < children.length; i++) {
+          // console.log(children[i].tagName);
+          if (children.classList !== null) {
+            //console.log(children.classList);
+            if (children[i].tagName == "LABEL") {
+              //console.log(children[i]);
+              if (children[i].classList.contains("label-2")) {
+                children[i].contentEditable = "true";
+                children[i].addEventListener("keydown", function (e) {
+                  if (e.keyCode === 13) {
+                    e.preventDefault();
+                    this.contentEditable = "false";
+                  }
+                });
+                //console.log("Reached");
+              }
+            }
+          }
+        }
+
         
       },
       false
     );
   }
 }
-
+// Function to create a list.
 function createLi() {
   //  list with input value
   const list =
     '<li> <input type="checkbox" name="checkbox" id="list-1" />' +
-    '<label class="label-text"> ' +
+    '<label class="label-2"> ' +
     input.value +
     "</label>" +
     ' <i class="fa-solid fa-trash-can deleteIcon"></i>' +
