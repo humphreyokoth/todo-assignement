@@ -3,7 +3,7 @@ const input = document.querySelector("#input-add");
 const ul = document.querySelector("#task");
 const deleteIcon = document.getElementsByClassName("deleteIcon");
 const editIcon = document.getElementsByClassName("editIcon");
-const editLabel = document.getElementsByClassName("label-text");
+const editLabel = document.getElementsByClassName("label-2");
 
 //Function to delete list
 function deleteList() {
