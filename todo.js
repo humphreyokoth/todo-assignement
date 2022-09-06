@@ -26,7 +26,7 @@ function editList() {
     editIcon[i].addEventListener(
       "click",
       function () {
-        var parentofSelected = this.parentNode; // gives the parent DIV
+        var parentofSelected = this.parentNode;
         //console.log("Reached");
         var children = parentofSelected.childNodes;
         //console.log(parentofSelected);
@@ -44,13 +44,10 @@ function editList() {
                     this.contentEditable = "false";
                   }
                 });
-                //console.log("Reached");
               }
             }
           }
         }
-
-        
       },
       false
     );
@@ -70,7 +67,7 @@ function createLi() {
 
   return list;
 }
-
+// Eventlistener on adding of a list item using form
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const li = createLi();
