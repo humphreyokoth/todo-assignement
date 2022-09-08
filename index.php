@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
-
 </head>
-
 <body>
-    <div class="container">
+<?php 
+
+require_once("./introphp.php")
+
+?>
+<div class="container">
         <form action="index.php"   method="post" class="addTask"  id="addForm" name="todoList" >
             <div class="row">
                 <div class="col-1">
@@ -42,31 +44,23 @@
             </div>
            
             <div class="container-list">
+              
                 <div class="list" id="list">
+                
                     <ul class="list-li" id="task">
+                    <?php  $list = todo();
+                    foreach($list=[] as $item){?>
+                
                         <li>
                             <input type="checkbox" name="checkbox" id="list-1"  />
-                            <label class="label-2"> Buy groceries for next week</label>
+                            <label class="label-2"> <?php echo $list?></label>
                             <i class="fa-solid fa-trash-can deleteIcon"></i>
 
                             <i class="fa-solid fa-pencil editIcon "></i>
                            
                         </li>
-                        <li>
-                            <input type="checkbox" name="checkbox" id="insurance-list" />
-                            <label class="label-3">Renew car insurance</label>
-                             <!-- <i class="fa-regular fa-hourglass-half icon">
-                            </i><input class="date input-icons" type="date" name="date" /> -->
-                            <label class="label-date"></label><i class="fa-solid fa-trash-can deleteIcon"></i>
-                             <i class="fa-solid fa-pencil editIcon"></i>
-                          
-                        </li>
-                       
-                        <li>
-                            <input type="checkbox" name="checkbox" id="input-checkbox" /><label class="label-4">Sign up
-                                for online course</label>  <i class="fa-solid fa-trash-can deleteIcon"></i> 
-                                <i class="fa-solid fa-pencil editIcon"></i>
-                        </li>
+                       <?php }
+                        ?>
                     </ul>
                 </div>
                 
@@ -74,8 +68,7 @@
             </div>
        
     </div>
-    <script src="todoJquery.js"></script>
+    
 </body>
-
+</body>
 </html>
-
