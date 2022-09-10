@@ -17,10 +17,11 @@ $GLOBALS['to_do_list']=["shopping","cleaning","reading","praying","swimming"];
 //Returning list of items in todolist using function.
 function todo(){
   foreach($GLOBALS['to_do_list'] as $item){
-   echo "$item \n";
+   echo $item;
+   echo "<br/>";
   }
- }
-todo();
+}
+//todo();
 
 
 //Write a function with two parameters(index, item) and for this function replace the item at the position 
@@ -41,11 +42,11 @@ return $GLOBALS['to_do_list'];
 //Returning list of items in todolist.
 $newList = [];
 $newList = update_todolist(1,"playingFootball");
-var_dump($newList);
+//var_dump($newList);
 
 // Returning updated list.
 $updatedList = delete_todolist_item(3);
-var_dump($updatedList);
+//var_dump($updatedList);
 
  
 ?>
